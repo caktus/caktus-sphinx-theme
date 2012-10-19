@@ -8,6 +8,26 @@
  * Adapted from the Sphinx basic theme BSD licensed by the Sphinx team
  */
 
+
+/* Caktus variables
+================================================== */
+
+@caktusgray: #6C7A78;
+@caktusgreen: #9EC16C;
+@lightcaktusgreen: #eaf2e0;
+@darkcaktusgreen: #799b48;
+@white: #fffff;
+@baseLineHeight: 24px;
+@innerColor: #cd0000;
+@outerColor: @caktusgray;
+@blue: #00aef0;
+
+@contentWidth: 960px;
+@sidebarWidth: 180px;
+
+/* Original Basic Layout
+================================================== */
+
 /* -- main layout ----------------------------------------------------------- */
 
 div.clearer {
@@ -535,4 +555,58 @@ span.eqno {
     #top-link {
         display: none;
     }
+}
+
+/* Caktus Customizations
+================================================== */
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: @baseLineHeight;
+    color: @caktusgray;
+    background-color: @white;
+}
+
+a {
+    color: @caktusgreen;
+
+    &.active, &:hover {
+        color: @darkcaktusgreen;
+    }
+}
+
+div.document {
+    width: @contentWidth;
+    margin: 30px auto 0 auto;
+}
+
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+div.bodywrapper {
+    margin: 0 0 0 @sidebarWidth;
+}
+
+div.sphinxsidebar {
+    width: @sidebarWidth;
+}
+ 
+div.body {
+    padding: 0 30px 0 30px;
+}
+ 
+div.footer {
+    width: @contentWidth;
+    margin: 20px auto 30px auto;
+    font-size: 14px;
+    text-align: right;
+}
+
+div.related {
+    width: @contentWidth;
+    margin: 0 auto;
 }

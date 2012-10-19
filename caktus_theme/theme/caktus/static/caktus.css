@@ -7,6 +7,10 @@
  * 
  * Adapted from the Sphinx basic theme BSD licensed by the Sphinx team
  */
+/* Caktus variables
+================================================== */
+/* Original Basic Layout
+================================================== */
 /* -- main layout ----------------------------------------------------------- */
 div.clearer {
   clear: both;
@@ -442,4 +446,48 @@ span.eqno {
   #top-link {
     display: none;
   }
+}
+/* Caktus Customizations
+================================================== */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #6c7a78;
+  background-color: #ffffff ff;
+}
+a {
+  color: #9ec16c;
+}
+a.active,
+a:hover {
+  color: #799b48;
+}
+div.document {
+  width: 960px;
+  margin: 30px auto 0 auto;
+}
+div.documentwrapper {
+  float: left;
+  width: 100%;
+}
+div.bodywrapper {
+  margin: 0 0 0 180px;
+}
+div.sphinxsidebar {
+  width: 180px;
+}
+div.body {
+  padding: 0 30px 0 30px;
+}
+div.footer {
+  width: 960px;
+  margin: 20px auto 30px auto;
+  font-size: 14px;
+  text-align: right;
+}
+div.related {
+  width: 960px;
+  margin: 0 auto;
 }
