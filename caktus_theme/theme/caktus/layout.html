@@ -1,0 +1,16 @@
+{%- extends "basic/layout.html" %}
+
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+{% set metatags = '<meta name="viewport" content="width=device-width, initial-scale=1.0">' %}
+{% set favicon = 'favicon.png' %}
+{% set logo = 'caktus-logo.png' %}
+
+
+{%- block sidebarlogo %}
+    <p class="logo"><a href="http://www.caktusgroup.com/services/">
+        <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo" >
+    </a></p>
+{%- endblock %}
