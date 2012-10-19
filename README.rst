@@ -3,3 +3,34 @@ Caktus Sphinx Theme
 
 This is a custom `Sphinx <http://sphinx.pocoo.org/>`_ theme used for documenting
 projects written and maintained by Caktus Consulting Group.
+
+
+Installing
+--------------------------------------
+
+There are no current releases of this theme but you can install directly from Github::
+
+    pip install git+git://github.com/caktus/caktus-sphinx-theme.git
+
+Once installed you should change your Sphinx ``conf.py`` to include::
+
+    import caktus_theme
+    html_theme = 'caktus'
+    html_theme_path = [caktus_theme.get_theme_dir()]
+
+
+Documentation
+-----------------------------------
+
+Additional documentation on using caktus-sphinx-theme is available on 
+`Read The Docs <http://readthedocs.org/docs/caktus-sphinx-theme/>`_. The documentation
+also uses the theme so you can see an example of the style.
+
+
+License
+--------------------------------------
+
+caktus-sphinx-theme is released under the BSD License. The theme itself contains a number
+of references to Caktus Consulting Group including logos but you are free to adapt this
+theme for your own uses. See the `LICENSE <https://github.com/caktus/caktus-sphinx-theme/blob/master/LICENSE>`_
+file for more details.
