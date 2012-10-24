@@ -18,6 +18,9 @@ Once installed you should change your Sphinx ``conf.py`` to include::
     html_theme = 'caktus'
     html_theme_path = [caktus_theme.get_theme_dir()]
 
+To use the Pygments style from the theme you should ensure that ``pygments_style`` is
+not set.
+
 
 Documentation
 -----------------------------------

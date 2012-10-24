@@ -9,6 +9,8 @@
  */
 /* Caktus variables
 ================================================== */
+/* LESS Mixins
+================================================== */
 /* Original Basic Layout
 ================================================== */
 /* -- main layout ----------------------------------------------------------- */
@@ -450,12 +452,20 @@ span.eqno {
 /* Caktus Customizations
 ================================================== */
 body {
-  margin: 0;
+  margin: 10px 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #6c7a78;
-  background-color: #ffffff ff;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 a {
   color: #9ec16c;
@@ -471,21 +481,24 @@ div.document {
 div.documentwrapper {
   float: left;
   width: 100%;
+  background-color: #6c7a78;
 }
 div.bodywrapper {
   margin: 0 0 0 180px;
+  background-color: #ffffff;
 }
 div.sphinxsidebar {
   width: 180px;
 }
 div.sphinxsidebar p.logo {
   width: 100%;
+  background-color: #ffffff;
 }
 div.sphinxsidebar p.logo img.logo {
   width: 100%;
 }
 div.body {
-  padding: 0 30px 0 30px;
+  padding: 10px 30px;
 }
 div.footer {
   width: 960px;
@@ -496,4 +509,11 @@ div.footer {
 div.related {
   width: 960px;
   margin: 0 auto;
+}
+div.highlight pre {
+  border: solid 1px #ccc;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
