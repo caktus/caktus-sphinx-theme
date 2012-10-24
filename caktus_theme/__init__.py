@@ -14,3 +14,14 @@ def get_theme_dir():
     option within Sphinx's ``conf.py`` file.
     """
     return os.path.abspath(os.path.join(os.path.dirname(__file__), "theme"))
+
+
+def default_sidebars():
+    """
+    Returns a dictionary mapping for the templates used to render the
+    sidebar on the index page and sub-pages.
+    """
+    return {
+        'index': ['index-sidebar.html', 'sourcelink.html', 'searchbox.html'],
+        '**': ['localtoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html']
+    }

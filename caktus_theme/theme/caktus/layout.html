@@ -6,7 +6,14 @@
 
 {% set metatags = '<meta name="viewport" content="width=device-width, initial-scale=1.0">' %}
 {% set favicon = 'favicon.png' %}
-{% set logo = 'caktus-logo.png' %}
+
+{%- block sidebarlogo %}
+{{ super() }}
+<h3>{{ project }}</h3>
+{%- if theme_tagline %}
+<p class="tagline">{{ theme_tagline }}</p>
+{% endif %}
+{%- endblock %}
 
 {%- block footer %}
     <div class="footer">
