@@ -468,11 +468,12 @@ h6 {
   margin: 0;
 }
 a {
-  color: #9ec16c;
+  font-weight: bold;
+  color: #799b48;
 }
 a.active,
 a:hover {
-  color: #799b48;
+  color: #9ec16c;
 }
 div.document {
   width: 960px;
@@ -490,6 +491,13 @@ div.bodywrapper {
 div.sphinxsidebar {
   width: 180px;
   color: #ffffff;
+}
+div.sphinxsidebar a {
+  color: #9ec16c;
+}
+div.sphinxsidebar a.active,
+div.sphinxsidebar a:hover {
+  color: #799b48;
 }
 div.sphinxsidebar p.logo {
   width: 100%;

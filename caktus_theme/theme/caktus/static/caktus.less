@@ -585,10 +585,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: @caktusgreen;
+    font-weight: bold;
+    color: @darkcaktusgreen;
 
     &.active, &:hover {
-        color: @darkcaktusgreen;
+        color: @caktusgreen;
     }
 }
 
@@ -611,6 +612,14 @@ div.bodywrapper {
 div.sphinxsidebar {
     width: @sidebarWidth;
     color: @white;
+
+    a {
+        color: @caktusgreen;
+
+        &.active, &:hover {
+            color: @darkcaktusgreen;
+        }
+    }
 
     p.logo {
         width: 100%;
