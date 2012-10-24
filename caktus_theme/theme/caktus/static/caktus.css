@@ -516,6 +516,10 @@ div.sphinxsidebar #searchbox input[type="text"] {
 div.sphinxsidebar #searchbox input[type="submit"] {
   width: 20%;
 }
+div.sphinxsidebar .tagline,
+div.sphinxsidebar .sponsor {
+  line-height: 18px;
+}
 div.body {
   padding: 10px 30px;
 }
