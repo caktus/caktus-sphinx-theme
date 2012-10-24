@@ -610,13 +610,27 @@ div.bodywrapper {
 
 div.sphinxsidebar {
     width: @sidebarWidth;
+    color: @white;
 
     p.logo {
         width: 100%;
         background-color: @white;
         img.logo {
             width: 100%;
-        }      
+        }  
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    #searchbox {
+        input[type="text"] {
+            width: 75%;
+        }
+        input[type="submit"] {
+            width: 20%;
+        }
     }
 }
  

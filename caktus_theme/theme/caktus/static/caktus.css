@@ -489,6 +489,7 @@ div.bodywrapper {
 }
 div.sphinxsidebar {
   width: 180px;
+  color: #ffffff;
 }
 div.sphinxsidebar p.logo {
   width: 100%;
@@ -496,6 +497,16 @@ div.sphinxsidebar p.logo {
 }
 div.sphinxsidebar p.logo img.logo {
   width: 100%;
+}
+div.sphinxsidebar ul {
+  margin: 0;
+  padding: 0;
+}
+div.sphinxsidebar #searchbox input[type="text"] {
+  width: 75%;
+}
+div.sphinxsidebar #searchbox input[type="submit"] {
+  width: 20%;
 }
 div.body {
   padding: 10px 30px;
