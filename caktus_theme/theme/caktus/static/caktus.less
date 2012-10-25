@@ -19,7 +19,7 @@
 @white: #ffffff;
 @offwhite: #f8f8f8;
 @lightgray: #e8e8e8;
-@nearblack: #484848;
+@nearblack: #383838;
 @baseLineHeight: 24px;
 @innerColor: #cd0000;
 @outerColor: @caktusgray;
@@ -317,7 +317,9 @@ p.topic-title {
 div.admonition {
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 7px;
+    padding: 0;
+    background: @caktusgreen;
+    border: 1px solid @nearblack;
 }
 
 div.admonition dt {
@@ -328,9 +330,15 @@ div.admonition dl {
     margin-bottom: 0;
 }
 
+div.admonition p {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 p.admonition-title {
-    margin: 0px 10px 5px 0px;
     font-weight: bold;
+    background: @darkcaktusgreen;
+    border-bottom: 1px solid @nearblack;
 }
 
 div.body p.centered {
@@ -667,8 +675,9 @@ div.related {
     margin: 0 auto;
 }
 
-div.highlight {
+div.highlight, div.highlight-python {
     pre {
+        background: none repeat scroll 0 0 #F0F0F0;
         border: solid 1px #ccc;
         padding: 5px;
         .border-radius(5px);
