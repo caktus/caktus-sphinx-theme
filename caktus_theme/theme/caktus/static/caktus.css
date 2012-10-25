@@ -256,6 +256,12 @@ p.admonition-title {
   background: #799b48;
   border-bottom: 1px solid #383838;
 }
+div.admonition.warning {
+  background: #e8e8e8;
+}
+div.warning p.admonition-title {
+  background: #ee5555;
+}
 div.body p.centered {
   text-align: center;
   margin-top: 25px;
