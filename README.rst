@@ -10,13 +10,14 @@ Installing
 
 There are no current releases of this theme but you can install directly from Github::
 
-    pip install git+git://github.com/caktus/caktus-sphinx-theme.git
+    pip install git+git://github.com/caktus/caktus-sphinx-theme.git#egg=caktus-sphinx-theme
 
 Once installed you should change your Sphinx ``conf.py`` to include::
 
     import caktus_theme
     html_theme = 'caktus'
     html_theme_path = [caktus_theme.get_theme_dir()]
+    html_sidebars = caktus_theme.default_sidebars()
 
 To use the Pygments style from the theme you should ensure that ``pygments_style`` is
 not set.
