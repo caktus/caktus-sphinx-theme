@@ -1,9 +1,9 @@
-"Custom Sphinx theme for project written and maintained by Caktus Consulting Group."
+"Custom Sphinx theme for projects written and maintained by Caktus Consulting Group."
 
 import os
 
 
-__version__ = '0.1.0a'
+__version__ = '0.1.0'
 
 
 def get_theme_dir():
