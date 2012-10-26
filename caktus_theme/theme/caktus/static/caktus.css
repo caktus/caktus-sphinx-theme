@@ -56,8 +56,8 @@ a:hover {
 div.document {
   width: 80%;
   min-width: 480px;
-  margin: 30px auto 0 auto;
-  overflow: hidden;
+  margin: 10px auto 0 auto;
+  background-color: #6c7a78;
 }
 div.documentwrapper {
   display: inline;
@@ -65,6 +65,7 @@ div.documentwrapper {
   width: 83.33333333333334%;
   margin: 0 0%;
   background-color: #f8f8f8;
+  padding-top: 10px;
 }
 div.bodywrapper {
   margin: 0;
@@ -119,8 +120,7 @@ div.sphinxsidebar {
   font-size: 90%;
   color: #e8e8e8;
   background-color: #6c7a78;
-  margin-bottom: -2000px;
-  padding-bottom: 2000px;
+  padding-top: 10px;
 }
 div.sphinxsidebar a {
   color: #9ec16c;
