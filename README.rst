@@ -38,3 +38,6 @@ caktus-sphinx-theme is released under the BSD License. The theme itself contains
 of references to Caktus Consulting Group including logos but you are free to adapt this
 theme for your own uses. See the `LICENSE <https://github.com/caktus/caktus-sphinx-theme/blob/master/LICENSE>`_
 file for more details.
+
+This theme makes use of the `Semantic Grid System <http://semantic.gs/>`_ which is available
+under the Apache 2.0 license.
