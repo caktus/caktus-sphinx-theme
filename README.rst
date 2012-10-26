@@ -22,6 +22,9 @@ Once installed you should change your Sphinx ``conf.py`` to include::
 To use the Pygments style from the theme you should ensure that ``pygments_style`` is
 not set.
 
+For additional detail on configuring the theme, please read the full
+`usage documentation <https://caktus-sphinx-theme.readthedocs.org/en/latest/usage.html>`_.
+
 
 Documentation
 -----------------------------------
