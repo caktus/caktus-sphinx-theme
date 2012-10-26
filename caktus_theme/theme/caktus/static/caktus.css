@@ -7,19 +7,84 @@
  * 
  * Adapted from the Sphinx basic theme BSD licensed by the Sphinx team
  */
+/* Semantic Grid System
+================================================== */
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
 /* Caktus variables
 ================================================== */
 /* LESS Mixins
 ================================================== */
-/* Original Basic Layout
+/* Layout Areas
 ================================================== */
+/* -- globals ----------------------------------------------------------- */
+body {
+  margin: 10px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #383838;
+  background-color: #e8e8e8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+a {
+  font-weight: bold;
+  color: #799b48;
+}
+a.active,
+a:hover {
+  color: #9ec16c;
+}
 /* -- main layout ----------------------------------------------------------- */
+div.document {
+  width: 80%;
+  min-width: 480px;
+  margin: 30px auto 0 auto;
+  overflow: hidden;
+}
+div.documentwrapper {
+  display: inline;
+  float: left;
+  width: 83.33333333333334%;
+  margin: 0 0%;
+  background-color: #f8f8f8;
+}
+div.bodywrapper {
+  margin: 0;
+}
+div.body {
+  padding: 10px 30px;
+}
 div.clearer {
   clear: both;
 }
+div.footer {
+  width: 960px;
+  margin: 20px auto 30px auto;
+  font-size: 14px;
+  text-align: right;
+}
 /* -- relbar ---------------------------------------------------------------- */
 div.related {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   font-size: 90%;
 }
 div.related h3 {
@@ -37,18 +102,43 @@ div.related ul li.right {
   float: right;
   margin-right: 5px;
 }
+img {
+  border: 0;
+}
 /* -- sidebar --------------------------------------------------------------- */
 div.sphinxsidebarwrapper {
   padding: 10px 5px 0 10px;
 }
 div.sphinxsidebar {
+  display: inline;
   float: left;
-  width: 230px;
-  margin-left: -100%;
+  width: 16.666666666666664%;
+  margin: 0 0%;
   font-size: 90%;
+  color: #e8e8e8;
+  background-color: #6c7a78;
+  margin-bottom: -2000px;
+  padding-bottom: 2000px;
+}
+div.sphinxsidebar a {
+  color: #9ec16c;
+}
+div.sphinxsidebar a.active,
+div.sphinxsidebar a:hover {
+  color: #799b48;
+}
+div.sphinxsidebar p.logo {
+  width: 80%;
+  margin: 5px auto;
+  background-color: #ffffff;
+}
+div.sphinxsidebar p.logo img.logo {
+  width: 100%;
 }
 div.sphinxsidebar ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 div.sphinxsidebar ul ul {
   margin-left: 20px;
@@ -69,13 +159,14 @@ div.sphinxsidebar form input {
   font-size: 1em;
 }
 div.sphinxsidebar #searchbox input[type="text"] {
-  width: 170px;
+  width: 75%;
 }
 div.sphinxsidebar #searchbox input[type="submit"] {
-  width: 30px;
+  width: 20%;
 }
-img {
-  border: 0;
+div.sphinxsidebar .tagline,
+div.sphinxsidebar .sponsor {
+  line-height: 18px;
 }
 /* -- search page ----------------------------------------------------------- */
 ul.search {
@@ -437,6 +528,15 @@ div.viewcode-block:target {
   margin: -1px -10px;
   padding: 0 10px;
 }
+div.highlight pre,
+div.highlight-python pre {
+  background: none repeat scroll 0 0 #F0F0F0;
+  border: solid 1px #ccc;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
 /* -- math display ---------------------------------------------------------- */
 img.math {
   vertical-align: middle;
@@ -461,97 +561,4 @@ span.eqno {
   #top-link {
     display: none;
   }
-}
-/* Caktus Customizations
-================================================== */
-body {
-  margin: 10px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  color: #383838;
-  background-color: #e8e8e8;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-a {
-  font-weight: bold;
-  color: #799b48;
-}
-a.active,
-a:hover {
-  color: #9ec16c;
-}
-div.document {
-  width: 960px;
-  margin: 30px auto 0 auto;
-}
-div.documentwrapper {
-  float: left;
-  width: 100%;
-  background-color: #6c7a78;
-}
-div.bodywrapper {
-  margin: 0 0 0 180px;
-  background-color: #f8f8f8;
-}
-div.sphinxsidebar {
-  width: 180px;
-  color: #e8e8e8;
-}
-div.sphinxsidebar a {
-  color: #9ec16c;
-}
-div.sphinxsidebar a.active,
-div.sphinxsidebar a:hover {
-  color: #799b48;
-}
-div.sphinxsidebar p.logo {
-  width: 100%;
-  background-color: #ffffff;
-}
-div.sphinxsidebar p.logo img.logo {
-  width: 100%;
-}
-div.sphinxsidebar ul {
-  margin: 0;
-  padding: 0;
-}
-div.sphinxsidebar #searchbox input[type="text"] {
-  width: 75%;
-}
-div.sphinxsidebar #searchbox input[type="submit"] {
-  width: 20%;
-}
-div.sphinxsidebar .tagline,
-div.sphinxsidebar .sponsor {
-  line-height: 18px;
-}
-div.body {
-  padding: 10px 30px;
-}
-div.footer {
-  width: 960px;
-  margin: 20px auto 30px auto;
-  font-size: 14px;
-  text-align: right;
-}
-div.related {
-  width: 960px;
-  margin: 0 auto;
-}
-div.highlight pre,
-div.highlight-python pre {
-  background: none repeat scroll 0 0 #F0F0F0;
-  border: solid 1px #ccc;
-  padding: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }

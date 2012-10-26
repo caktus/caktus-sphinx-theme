@@ -15,6 +15,22 @@
 {% endif %}
 {%- endblock %}
 
+{%- block content %}
+    <div class="document">
+    {%- block sidebar %}{{ sidebar() }}{% endblock %}
+    {%- block document %}
+        <div class="documentwrapper">
+            <div class="bodywrapper">
+                <div class="body">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    {%- endblock %}
+    <div class="clearer"></div>
+    </div>
+{%- endblock %}
+
 {%- block footer %}
     <div class="footer">
     {%- if show_copyright %}

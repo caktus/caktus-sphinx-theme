@@ -8,6 +8,13 @@
  * Adapted from the Sphinx basic theme BSD licensed by the Sphinx team
  */
 
+/* Semantic Grid System
+================================================== */
+
+@import 'grid.less';
+
+@gutter-width: 0;
+@total-width: 100%;
 
 /* Caktus variables
 ================================================== */
@@ -41,19 +48,72 @@
     border-radius: @radius;
 }
 
-/* Original Basic Layout
+/* Layout Areas
 ================================================== */
 
+/* -- globals ----------------------------------------------------------- */
+
+body {
+    margin: 10px 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: @baseLineHeight;
+    color: @nearblack;
+    background-color: @lightgray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    font-weight: bold;
+    color: @darkcaktusgreen;
+
+    &.active, &:hover {
+        color: @caktusgreen;
+    }
+}
+
+
 /* -- main layout ----------------------------------------------------------- */
+
+div.document {
+    width: 80%;
+    min-width: 480px;
+    margin: 30px auto 0 auto;
+    overflow: hidden;
+}
+
+div.documentwrapper {
+    .column(10);
+    background-color: @offwhite;
+}
+
+div.bodywrapper {
+    margin: 0;
+}
+ 
+div.body {
+    padding: 10px 30px;
+}
 
 div.clearer {
     clear: both;
 }
 
+div.footer {
+    width: @contentWidth;
+    margin: 20px auto 30px auto;
+    font-size: 14px;
+    text-align: right;
+}
+
 /* -- relbar ---------------------------------------------------------------- */
 
 div.related {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     font-size: 90%;
     h3 {
         display: none;
@@ -75,6 +135,10 @@ div.related {
     }
 }
 
+img {
+    border: 0;
+}
+
 /* -- sidebar --------------------------------------------------------------- */
 
 div.sphinxsidebarwrapper {
@@ -82,12 +146,34 @@ div.sphinxsidebarwrapper {
 }
 
 div.sphinxsidebar {
-    float: left;
-    width: 230px;
-    margin-left: -100%;
+    .column(2);
     font-size: 90%;
+    color: @lightgray;
+    background-color: @caktusgray;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+
+    a {
+        color: @caktusgreen;
+
+        &.active, &:hover {
+            color: @darkcaktusgreen;
+        }
+    }
+
+    p.logo {
+        width: 80%;
+        margin: 5px auto;
+        background-color: @white;
+        img.logo {
+            width: 100%;
+        }
+    }
+
     ul {
         list-style: none;
+        margin: 0;
+        padding: 0;
 
         ul {
             margin-left: 20px;
@@ -113,17 +199,16 @@ div.sphinxsidebar {
 
     #searchbox {
         input[type="text"] {
-            width: 170px;
+            width: 75%;
         }
-
         input[type="submit"] {
-            width: 30px;
+            width: 20%;
         }
     }
-}
 
-img {
-    border: 0;
+    .tagline, .sponsor {
+        line-height: 18px;
+    }
 }
 
 /* -- search page ----------------------------------------------------------- */
@@ -557,6 +642,15 @@ div.viewcode-block:target {
     padding: 0 10px;
 }
 
+div.highlight, div.highlight-python {
+    pre {
+        background: none repeat scroll 0 0 #F0F0F0;
+        border: solid 1px #ccc;
+        padding: 5px;
+        .border-radius(5px);
+    }
+}
+
 /* -- math display ---------------------------------------------------------- */
 
 img.math {
@@ -586,110 +680,5 @@ span.eqno {
     div.footer,
     #top-link {
         display: none;
-    }
-}
-
-/* Caktus Customizations
-================================================== */
-
-body {
-    margin: 10px 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    line-height: @baseLineHeight;
-    color: @nearblack;
-    background-color: @lightgray;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-a {
-    font-weight: bold;
-    color: @darkcaktusgreen;
-
-    &.active, &:hover {
-        color: @caktusgreen;
-    }
-}
-
-div.document {
-    width: @contentWidth;
-    margin: 30px auto 0 auto;
-}
-
-div.documentwrapper {
-    float: left;
-    width: 100%;
-    background-color: @caktusgray;
-}
-
-div.bodywrapper {
-    margin: 0 0 0 @sidebarWidth;
-    background-color: @offwhite;
-}
-
-div.sphinxsidebar {
-    width: @sidebarWidth;
-    color: @lightgray;
-
-    a {
-        color: @caktusgreen;
-
-        &.active, &:hover {
-            color: @darkcaktusgreen;
-        }
-    }
-
-    p.logo {
-        width: 100%;
-        background-color: @white;
-        img.logo {
-            width: 100%;
-        }
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-    #searchbox {
-        input[type="text"] {
-            width: 75%;
-        }
-        input[type="submit"] {
-            width: 20%;
-        }
-    }
-
-    .tagline, .sponsor {
-        line-height: 18px;
-    }
-
-}
- 
-div.body {
-    padding: 10px 30px;
-}
- 
-div.footer {
-    width: @contentWidth;
-    margin: 20px auto 30px auto;
-    font-size: 14px;
-    text-align: right;
-}
-
-div.related {
-    width: @contentWidth;
-    margin: 0 auto;
-}
-
-div.highlight, div.highlight-python {
-    pre {
-        background: none repeat scroll 0 0 #F0F0F0;
-        border: solid 1px #ccc;
-        padding: 5px;
-        .border-radius(5px);
     }
 }
