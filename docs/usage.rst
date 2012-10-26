@@ -73,8 +73,9 @@ sidebar under the Quick Links heading. The set of recongnized keys are given bel
 
 - pypi: Link to the project's page on the Python Package Index
 - github: Link to the project source on Github. This will also include a link to the issue tracker
+- demo: Link to a publicly accessible live demo
 - mail: Link to the project's mailing list
 
 If the ``links`` key is not given in ``html_theme_options`` then the Quick Links section
 will not display. If one of the above link types is not present then that link
-will not be shown in the listing
+will not be shown in the listing.
