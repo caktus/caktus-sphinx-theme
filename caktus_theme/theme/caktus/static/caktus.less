@@ -34,8 +34,7 @@
 @darkred: #ee5555;
 @lightred: #ff4444;
 
-@contentWidth: 960px;
-@sidebarWidth: 180px;
+@contentWidth: 80%;
 
 
 /* LESS Mixins
@@ -79,7 +78,7 @@ a {
 /* -- main layout ----------------------------------------------------------- */
 
 div.document {
-    width: 80%;
+    width: @contentWidth;
     min-width: 480px;
     margin: 30px auto 0 auto;
     overflow: hidden;
@@ -104,6 +103,7 @@ div.clearer {
 
 div.footer {
     width: @contentWidth;
+    min-width: 480px;
     margin: 20px auto 30px auto;
     font-size: 14px;
     text-align: right;
@@ -112,7 +112,8 @@ div.footer {
 /* -- relbar ---------------------------------------------------------------- */
 
 div.related {
-    width: 80%;
+    width: @contentWidth;
+    min-width: 480px;
     margin: 0 auto;
     font-size: 90%;
     h3 {

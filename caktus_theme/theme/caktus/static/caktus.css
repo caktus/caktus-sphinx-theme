@@ -76,7 +76,8 @@ div.clearer {
   clear: both;
 }
 div.footer {
-  width: 960px;
+  width: 80%;
+  min-width: 480px;
   margin: 20px auto 30px auto;
   font-size: 14px;
   text-align: right;
@@ -84,6 +85,7 @@ div.footer {
 /* -- relbar ---------------------------------------------------------------- */
 div.related {
   width: 80%;
+  min-width: 480px;
   margin: 0 auto;
   font-size: 90%;
 }
