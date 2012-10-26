@@ -101,7 +101,7 @@ html_theme_options = {
     'tagline': caktus_theme.__doc__,
     'links': {
         'github': 'https://github.com/caktus/caktus-sphinx-theme',
-    }
+    },
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

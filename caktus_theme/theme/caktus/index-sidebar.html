@@ -15,6 +15,11 @@
     <li><a href="{{ theme_links['mail'] }}">Mailing List</a></li>
     {% endif %}
 </ul>
+{% if theme_links['github'] and theme_forkme %}
+<a href="{{ theme_links['github'] }}">
+    <img style="position: absolute; top: 0; {{ theme_forkme }}: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_{{ theme_forkme }}_darkblue_121621.png" alt="Fork me on GitHub">
+</a>
+{% endif %}
 {% endif %}
 <p class="logo sponsor">
     <a href="http://www.caktusgroup.com/services/">

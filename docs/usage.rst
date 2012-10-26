@@ -49,7 +49,8 @@ example is given below.
         'tagline': caktus_theme.__doc__,
         'links': {
             'github': 'https://github.com/caktus/caktus-sphinx-theme',
-        }
+        },
+        'forkme': 'right',
     }
 
 These theme options assume that you are using the default sidebars given by
@@ -68,7 +69,7 @@ match the description given in the project's setup.py if there is one.
 ``links``
 ______________________________________
 
-The ``links`` options is a dictionary of links to be displayed on the index page
+The ``links`` option is a dictionary of links to be displayed on the index page
 sidebar under the Quick Links heading. The set of recongnized keys are given below
 
 - pypi: Link to the project's page on the Python Package Index
@@ -79,3 +80,15 @@ sidebar under the Quick Links heading. The set of recongnized keys are given bel
 If the ``links`` key is not given in ``html_theme_options`` then the Quick Links section
 will not display. If one of the above link types is not present then that link
 will not be shown in the listing.
+
+
+``forkme``
+______________________________________
+
+``forkme`` configures if/how the `"Fork me on Github" <https://github.com/blog/273-github-ribbons>`_
+banner is included on the documentation. By default the banner will display on the right-hand side
+if a Github link is included in the above ``links`` configuration. You may choose to have
+this display on the left side by setting this to ``left`` or disabling the banner by
+setting this option to an empty string or ``None``. Regardless of the positioning the
+banner will only display on the index of the documentation.
+
